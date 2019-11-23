@@ -9,6 +9,7 @@ import { MovieComponent } from './components/movie/movie.component';
 import { BuscarComponent } from './components/buscar/buscar.component';
 import { PeliculaImagenPipe } from './pipes/pelicula-imagen.pipe';
 import { GaleriaComponent } from './components/home/galeria.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GaleriaComponent } from './components/home/galeria.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
