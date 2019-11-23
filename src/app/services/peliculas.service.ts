@@ -44,10 +44,11 @@ export class PeliculasService {
   }
 
   buscarPelicula( texto:string ){
-
+    
     let url = `${ this.urlMoviedb }/search/movie?query=${ texto }&sort_by=popularity.desc&api_key=${ this.apikey }&language=es`;
-
-    return this.http.get( url );
+    return this.http.get( url ).pipe(map( (data:any) => {
+      return data.results;
+    }));
   }
 
 }
